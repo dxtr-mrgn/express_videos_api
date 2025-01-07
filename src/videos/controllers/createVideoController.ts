@@ -19,7 +19,7 @@ export const createVideoController = (req: Request<any, any, CreateInputVideoTyp
     currentDate.setDate(currentDate.getDate() + 1);
     const isoStringNextDay = currentDate.toISOString();
 
-    const defaultVideo = {
+    const newVideo: VideoDBType = {
         id: Date.now() + Math.random(),
         title: req.body.title,
         author: req.body.author,
@@ -30,8 +30,8 @@ export const createVideoController = (req: Request<any, any, CreateInputVideoTyp
         availableResolution: req.body.availableResolution || null,
     };
 
-    const newVideo: VideoDBType = {...defaultVideo, ...req.body};
     db.videos = [...db.videos, newVideo];
+    console.log(db.videos)
 
     res
         .status(201)
