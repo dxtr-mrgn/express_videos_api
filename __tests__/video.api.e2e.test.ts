@@ -1,7 +1,7 @@
 import request from 'supertest';
 import {app} from '../src/app';
 import dotenv from 'dotenv';
-import {InputVideoType} from '../src/videos/types/video-types';
+import {InputVideoType} from '../src/videos/video-types';
 import {SETTINGS} from '../src/settings';
 
 dotenv.config();

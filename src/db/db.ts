@@ -1,4 +1,4 @@
-import {DBType} from '../videos/types/db-types';
+import {DBType} from './db-types';
 
 
 export const db: DBType = { // создаём базу данных (пока это просто переменная)

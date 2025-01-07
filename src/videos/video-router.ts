@@ -1,17 +1,17 @@
 import {Router} from 'express';
-import {getVideos} from './controllers/getVideos';
-import {createVideo} from './controllers/createVideo';
-import {getVideoByID} from './controllers/getVideoByID';
-import {updateVideo} from './controllers/updateVideo';
-import {deleteVideo} from './controllers/deleteVideo';
+import {getVideosController} from './controllers/getVideosController';
+import {createVideoController} from './controllers/createVideoController';
+import {getVideoByIDController} from './controllers/getVideoByIDController';
+import {updateVideoController} from './controllers/updateVideoController';
+import {deleteVideoController} from './controllers/deleteVideoController';
 
 
 export const videosRouter = Router();
 
-videosRouter.get('/', getVideos);
-videosRouter.post('/', createVideo);
-videosRouter.get('/:id', getVideoByID);
-videosRouter.put('/:id', updateVideo);
-videosRouter.delete('/:id', deleteVideo);
+videosRouter.get('/', getVideosController);
+videosRouter.post('/', createVideoController);
+videosRouter.get('/:id', getVideoByIDController);
+videosRouter.put('/:id', updateVideoController);
+videosRouter.delete('/:id', deleteVideoController);
 
 

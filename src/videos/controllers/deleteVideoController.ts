@@ -1,7 +1,12 @@
 import {Request, Response} from 'express';
 import {db} from '../../db/db';
 
-export const deleteVideo = (req: Request, res: Response) => {
+export const deleteVideoController = (req: Request, res: Response) => {
+    if (!req.params.id) {
+        res.status(404).send('Provide the id of the video');
+        return;
+    }
+
     const videos = db.videos;
     for (let i = 0; i < videos.length; i++) {
         if (videos[i].id === +req.params.id) {
@@ -10,5 +15,5 @@ export const deleteVideo = (req: Request, res: Response) => {
             return;
         }
     }
-    res.send(404);
+    res.sendStatus(404);
 };

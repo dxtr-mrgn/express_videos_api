@@ -6,7 +6,7 @@ export type VideoDBType = {
     minAgeRestriction: number | null;
     createdAt: string;
     publicationDate: string;
-    availableResolution: string[];
+    availableResolution: string[] | undefined;
 };
 
 export type DBType = {
