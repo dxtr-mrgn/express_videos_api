@@ -5,7 +5,7 @@ config();
 export const SETTINGS = {
     PORT: process.env.PORT || 3003,
     PATH: {
-        VIDEOS: '/api/videos',
+        VIDEOS: '/videos',
         ALL_DATA: '/testing/all-data/',
     },
 };

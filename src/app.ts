@@ -7,7 +7,7 @@ export const app = express();
 app.use(express.json());
 
 app.get('/', (req: Request, res: Response) => {
-    res.status(200).json({version: '2.0'});
+    res.status(200).json({version: '3.0'});
 });
 
 app.delete(SETTINGS.PATH.ALL_DATA, (req: Request, res: Response) => {
