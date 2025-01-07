@@ -8,8 +8,8 @@ export const createInputValidation = (video: CreateInputVideoType) => {
         errorsMessages: []
     };
 // ...
-    if (!Array.isArray(video.availableResolution)
-        || !video.availableResolution.find(v => isInEnum(v, ResolutionsEnum))) {
+    if (video.availableResolution && (!Array.isArray(video.availableResolution)
+        || !video.availableResolution.find(v => isInEnum(v, ResolutionsEnum)))) {
         errors.errorsMessages.push({
             message: 'error!!!!', field: 'availableResolution is incorrect'
         });
