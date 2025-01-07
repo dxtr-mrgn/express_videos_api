@@ -7,7 +7,7 @@ export type ParamType = {
 export type CreateInputVideoType = {
     title: string,
     author: string,
-    availableResolution?: string[];
+    availableResolution?: string[] | null;
 }
 
 export type UpdateInputVideoType = {
