@@ -27,7 +27,7 @@ export const createVideoController = (req: Request<any, any, CreateInputVideoTyp
         minAgeRestriction: null,
         createdAt: isoStringCurrentDay,
         publicationDate: isoStringNextDay,
-        availableResolution: req.body.availableResolution || null,
+        availableResolutions: req.body.availableResolutions || null,
     };
 
     db.videos = [...db.videos, newVideo];

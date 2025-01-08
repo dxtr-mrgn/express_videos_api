@@ -7,13 +7,13 @@ export type ParamType = {
 export type CreateInputVideoType = {
     title: string,
     author: string,
-    availableResolution?: string[] | null;
+    availableResolutions?: string[] | null;
 }
 
 export type UpdateInputVideoType = {
     title: string,
     author: string,
-    availableResolution?: string[],
+    availableResolutions?: string[],
     canBeDownloaded?: boolean,
     minAgeRestriction?: number | null,
     publicationDate?: string;
