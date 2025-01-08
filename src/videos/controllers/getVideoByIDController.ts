@@ -12,7 +12,7 @@ export const getVideoByIDController = (req: Request, res: Response) => {
 
     for (let i = 0; i < videos.length; i++) {
         if (videos[i].id === +req.params.id) {
-            res.status(200).json(videos);
+            res.status(200).json(videos[i]);
             return;
         }
         res.sendStatus(404);
