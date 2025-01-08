@@ -16,12 +16,12 @@ export const createInputValidation = (video: CreateInputVideoType) => {
     }
     if (!video.title) {
         errors.errorsMessages.push({
-            message: 'error!!!!', field: 'title is required'
+            message: 'error!!!!', field: 'title'
         });
     }
-    if (!video.title) {
+    if (!video.author) {
         errors.errorsMessages.push({
-            message: 'error!!!!', field: 'author is required'
+            message: 'error!!!!', field: 'author'
         });
     }
     return errors;
@@ -32,6 +32,10 @@ export const updateInputValidation = (video: UpdateInputVideoType) => {
 
     if (!video.canBeDownloaded) {
         video.canBeDownloaded = false
+    } else if (typeof video.canBeDownloaded as any !== 'boolean') {
+        errors.errorsMessages.push({
+            message: 'error!!!!', field: 'canBeDownloaded'
+        });
     }
     if (!video.minAgeRestriction) {
         video.minAgeRestriction = null
