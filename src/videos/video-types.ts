@@ -1,4 +1,4 @@
-import {ResolutionsEnum, VideoDBType} from '../db/db-types';
+import {VideoDBType} from '../db/db-types';
 
 export type ParamType = {
     id: string

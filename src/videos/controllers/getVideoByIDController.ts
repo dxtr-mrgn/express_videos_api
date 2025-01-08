@@ -1,6 +1,5 @@
 import {Request, Response} from 'express';
 import {db} from '../../db/db';
-import {deleteVideoController} from './deleteVideoController';
 
 export const getVideoByIDController = (req: Request, res: Response) => {
     if (!req.params.id) {

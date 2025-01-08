@@ -1,5 +1,6 @@
 import {DBType} from './db-types';
-import {ResolutionsEnum, VideoDBType} from './db-types';
+import {VideoDBType} from './db-types';
+import {ResolutionsEnum} from '../settings';
 
 const video1: VideoDBType = {
     id: Date.now() + Math.random(),

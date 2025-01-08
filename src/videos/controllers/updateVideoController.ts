@@ -1,8 +1,6 @@
 import {Request, Response} from 'express';
 import {db} from '../../db/db';
-import {UpdateInputVideoType, OutputVideoType, ParamType} from '../video-types';
-import {VideoDBType} from '../../db/db-types';
-import {deleteVideoController} from './deleteVideoController';
+import {ParamType, UpdateInputVideoType} from '../video-types';
 import {updateInputValidation} from '../../validation/video-input-validation';
 
 export const updateVideoController = (req: Request<ParamType, UpdateInputVideoType>, res: Response) => {

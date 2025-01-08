@@ -1,7 +1,6 @@
 import {CreateInputVideoType, UpdateInputVideoType} from '../videos/video-types';
 import {isInEnum} from '../videos/helpers';
-import {ResolutionsEnum} from '../db/db-types';
-import {Request} from 'express';
+import {ResolutionsEnum} from '../settings';
 
 export const createInputValidation = (video: CreateInputVideoType) => {
     const errors: any = { // объект для сбора ошибок
