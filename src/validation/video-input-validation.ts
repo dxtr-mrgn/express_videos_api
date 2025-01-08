@@ -31,22 +31,26 @@ export const updateInputValidation = (video: UpdateInputVideoType) => {
     let errors = createInputValidation(video);
 
     if (!video.canBeDownloaded) {
-        video.canBeDownloaded = false
+        video.canBeDownloaded = false;
     } else if (typeof video.canBeDownloaded as any !== 'boolean') {
         errors.errorsMessages.push({
             message: 'error!!!!', field: 'canBeDownloaded'
         });
     }
     if (!video.minAgeRestriction) {
-        video.minAgeRestriction = null
-    } else if (video.minAgeRestriction > 18 || video.minAgeRestriction < 1 ) {
+        video.minAgeRestriction = null;
+    } else if (video.minAgeRestriction > 18 || video.minAgeRestriction < 1) {
         errors.errorsMessages.push({
             message: 'error!!!!', field: 'minAgeRestriction'
         });
     }
     if (!video.publicationDate) {
-        delete video.publicationDate
+        delete video.publicationDate;
+    } else if (typeof video.publicationDate as any !== 'string') {
+        errors.errorsMessages.push({
+            message: 'error!!!!', field: 'publicationDate'
+        });
     }
 
     return errors;
-}
+};
