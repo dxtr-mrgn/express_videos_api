@@ -1,5 +1,5 @@
-import {DBType} from '../src/db/db-types';
-import {ResolutionsEnum, VideoDBType} from '../src/db/db-types';
+import {DBType} from './db-types';
+import {ResolutionsEnum, VideoDBType} from './db-types';
 
 const video1: VideoDBType = {
     id: Date.now() + Math.random(),
@@ -9,7 +9,7 @@ const video1: VideoDBType = {
     minAgeRestriction: null,
     createdAt: new Date().toISOString(),
     publicationDate: new Date().toISOString(),
-    availableResolution: [ResolutionsEnum.P240],
+    availableResolutions: [ResolutionsEnum.P240],
 };
 
 export const dataset1: DBType = {
