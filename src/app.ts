@@ -1,6 +1,6 @@
 import express, {Request, Response} from 'express';
 import {SETTINGS} from './settings';
-import {videosRouter} from './videos/video-router';
+import {videosRouter} from './videos/video-controller';
 import {setDB} from './db/db';
 
 export const app = express();
