@@ -19,7 +19,7 @@ export const createInputValidation = (video: CreateInputVideoType) => {
             message: 'error!!!!', field: 'title'
         });
     }
-    if (!video.author) {
+    if (!video.author || video.author.length > 20) {
         errors.errorsMessages.push({
             message: 'error!!!!', field: 'author'
         });
