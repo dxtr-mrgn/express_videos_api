@@ -14,7 +14,7 @@ export const createInputValidation = (video: CreateInputVideoType) => {
             message: 'error!!!!', field: 'availableResolution is incorrect'
         });
     }
-    if (!video.title) {
+    if (!video.title || video.title.length > 40) {
         errors.errorsMessages.push({
             message: 'error!!!!', field: 'title'
         });
@@ -41,7 +41,7 @@ export const updateInputValidation = (video: UpdateInputVideoType) => {
         video.minAgeRestriction = null
     } else if (video.minAgeRestriction > 18 || video.minAgeRestriction < 1 ) {
         errors.errorsMessages.push({
-            message: 'error!!!!', field: 'minAgeRestriction should be max 18 and min 1'
+            message: 'error!!!!', field: 'minAgeRestriction'
         });
     }
     if (!video.publicationDate) {
