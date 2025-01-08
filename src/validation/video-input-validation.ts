@@ -11,7 +11,7 @@ export const createInputValidation = (video: CreateInputVideoType) => {
     if (video.availableResolutions && (!Array.isArray(video.availableResolutions)
         || video.availableResolutions.find(v => isInEnum(v, ResolutionsEnum)))) {
         errors.errorsMessages.push({
-            message: 'error!!!!', field: 'availableResolution'
+            message: 'error!!!!', field: 'availableResolutions'
         });
     }
     if (!video.title || video.title.length > 40) {

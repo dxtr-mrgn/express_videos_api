@@ -15,6 +15,6 @@ export const getVideoByIDController = (req: Request, res: Response) => {
             res.status(200).json(videos[i]);
             return;
         }
-        res.sendStatus(404);
     }
+    res.sendStatus(404);
 };
